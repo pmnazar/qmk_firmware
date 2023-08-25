@@ -16,7 +16,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+ //   Bootloader selection
+ //   Teensy       halfkay
+ //   Pro Micro    caterina
+ //   Atmel DFU    atmel-dfu
+ //   LUFA DFU     lufa-dfu
+ //   QMK DFU      qmk-dfu
+ //   ATmega32A    bootloadHID
+ //   ATmega328P   USBasp
+
 #pragma once
 
 /* Handedness. */
 #define MASTER_RIGHT
+#define SPLIT_USB_DETECT
+
+#define TAPPING_TOGGLE 2
