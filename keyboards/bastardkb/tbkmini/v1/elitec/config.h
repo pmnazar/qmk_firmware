@@ -16,19 +16,27 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
- //   Bootloader selection
- //   Teensy       halfkay
- //   Pro Micro    caterina
- //   Atmel DFU    atmel-dfu
- //   LUFA DFU     lufa-dfu
- //   QMK DFU      qmk-dfu
- //   ATmega32A    bootloadHID
- //   ATmega328P   USBasp
-
 #pragma once
 
 /* Handedness. */
 #define MASTER_RIGHT
 #define SPLIT_USB_DETECT
+// #define EE_HANDS
+#define TAPPING_TOGGLE 3
+#define ONESHOT_TIMEOUT 2500
+#ifdef RGBLIGHT_ENABLE
+#    undef RGBLED_NUM
+#    undef RGBLED_SPLIT
+#    define WS2812_DI_PIN D3
+#    define RGBLIGHT_SPLIT
+#    define RGBLED_NUM 12
+#    define RGBLED_SPLIT {6, 6}
+#    define RGBLIGHT_DEFAULT_HUE 180
+#    define RGBLIGHT_LIMIT_VAL 180
+#    define RGBLIGHT_DEFAULT_SAT 180
+#    define RGBLIGHT_SLEEP
+#    define RGBLIGHT_HUE_STEP 25
+#    define RGBLIGHT_SAT_STEP 25
+#    define RGBLIGHT_VAL_STEP 25
+#endif
 
-#define TAPPING_TOGGLE 2

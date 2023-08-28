@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|---------|  |--------+---------+---------+---------+---------|                        |---------+---------+---------+---------+---------|  |--------|
              KC_LCTL,       KC_A,     KC_S,     KC_D,     KC_F,     KC_G,                              KC_H,     KC_J,     KC_K,     KC_L,  KC_SCLN,    KC_QUOT,
         //|---------|  |--------+---------+---------+---------+---------|                        |---------+---------+---------+---------+---------|  |--------|
-             KC_LSFT,       KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,                              KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,     KC_ESC,
+       OSM(MOD_LSFT),       KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,                              KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,     KC_ESC,
         //|---------|  |--------+---------+---------+---------+---------+---------|    |---------+---------+---------+---------+--------+----------|  |--------|
                                                        KC_LGUI,   KC_SPC,    TT(1),         TT(2),   KC_ENT,   KC_RALT
                                                   //`---------+---------+---------|    |---------+---------+---------|'
@@ -38,23 +38,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //,-------------------------------------------------------------.                        ,-------------------------------------------------------------.
               KC_TAB,       KC_1,     KC_2,     KC_3,     KC_4,     KC_5,                              KC_6,     KC_7,     KC_8,     KC_9,     KC_0,    KC_BSPC,
         //|---------|  |--------+---------+---------+---------+---------|                        |---------+---------+---------+---------+---------|  |--------|
-             KC_LCTL,    XXXXXXX,  XXXXXXX,  KC_BRMD,  KC_BRMU,  XXXXXXX,                           KC_LEFT,  KC_DOWN,    KC_UP, KC_RIGHT,  XXXXXXX,    XXXXXXX,
+             KC_LCTL,    XXXXXXX,  XXXXXXX,  KC_BRMD,  KC_BRMU,  RGB_TOG,                           KC_LEFT,  KC_DOWN,    KC_UP, KC_RIGHT,  RGB_TOG,    KC_RCTL,
         //|---------|  |--------+---------+---------+---------+---------|                        |---------+---------+---------+---------+---------|  |--------|
-             KC_LSFT,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                           KC_MPRV,  XXXXXXX,  KC_MPLY,  KC_MNXT,  XXXXXXX,    KC_MCTL,
+       OSM(MOD_LSFT),    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                           KC_MPRV,  XXXXXXX,  KC_MPLY,  KC_MNXT,  XXXXXXX,OSM(KC_RSFT),
         //|---------|  |--------+---------+---------+---------+---------+---------|    |---------+---------+---------+---------+--------+----------|  |--------|
-                                                       KC_LGUI,   KC_SPC,  _______,         TG(3),   KC_ENT,   KC_RALT
+                                                       KC_LGUI,   KC_SPC,  _______,         TT(3),   KC_ENT,   KC_RALT
                                                   //`---------+---------+---------|    |---------+---------+---------|'
         ),
 
     [2] = LAYOUT_split_3x6_3(
-        //,-----------------------------------------------------------------------------.                        ,-------------------------------------------------------------.
+        //,----------------------------------------------------------------------,,,,-------.                        ,-------------------------------------------------------------.
               KC_TAB,    KC_EXLM,    KC_AT,         KC_HASH,            KC_DLR,  KC_PERC,                           KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,    KC_BSPC,
         //|---------|  |--------+---------+------------------+----------------+---------|                        |---------+---------+---------+---------+---------|  |--------|
              KC_LCTL,    XXXXXXX,  XXXXXXX, KC_KB_VOLUME_DOWN, KC_KB_VOLUME_UP,  KC_MUTE,                           KC_MINS,   KC_EQL,  KC_LBRC,  KC_RBRC,  KC_BSLS,     KC_GRV,
         //|---------|  |--------+---------+------------------+----------------+---------|                        |---------+---------+---------+---------+---------|  |--------|
-             KC_LSFT,    XXXXXXX,  XXXXXXX,           XXXXXXX,         XXXXXXX,  XXXXXXX,                           KC_UNDS,  KC_PLUS,  KC_LCBR,  KC_RCBR,  KC_PIPE,    KC_TILD,
+       OSM(MOD_LSFT),    XXXXXXX,  XXXXXXX,           XXXXXXX,         XXXXXXX,  XXXXXXX,                           KC_UNDS,  KC_PLUS,  KC_LCBR,  KC_RCBR,  KC_PIPE,    KC_TILD,
         //|---------|  |--------+---------+------------------+----------------+---------+----------|    |--------+---------+---------+---------+---------+---------|  |--------|
-                                                                       KC_LGUI,    KC_SPC,   OSL(4),       _______,   KC_ENT,   KC_RALT
+                                                                       KC_LGUI,    KC_SPC,   TT(4),       _______,   KC_ENT,   KC_RALT
                                                                   //`---------+---------+----------|    |--------+---------+---------|'
         ),
 
@@ -62,18 +62,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //,-------------------------------------------------------------.                        ,-------------------------------------------------------------.
              XXXXXXX,      KC_F1,      KC_F2,      KC_F3,       KC_F4,    KC_F5,                             KC_F6,    KC_F7,    KC_F8,   KC_F9,    KC_F10,    XXXXXXX,
         //|---------|  |--------+-----------+-----------+------------+---------|                        |---------+---------+---------+---------+---------|  |--------|
-             KC_LCTL,    XXXXXXX,    XXXXXXX,   KC_MS_UP,     XXXXXXX,  XXXXXXX,                            KC_F11,  KC_BTN1,  KC_BTN2,  KC_WH_U,  XXXXXXX,    KC_RCTL,
+             KC_LCTL,    XXXXXXX, KC_MS_LEFT,   KC_MS_UP, KC_MS_RIGHT,  XXXXXXX,                            KC_F11,  KC_BTN1,  KC_BTN2,  KC_WH_U,  XXXXXXX,    KC_RCTL,
         //|---------|  |--------+-----------+-----------+------------+---------|                        |---------+---------+---------+---------+---------|  |--------|
-             KC_LSFT,    XXXXXXX, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,  XXXXXXX,                            KC_F12,  XXXXXXX,  XXXXXXX, KC_WH_D,   XXXXXXX,    KC_RSFT,
+             KC_LSFT,    XXXXXXX, XXXXXXX,    KC_MS_DOWN,     XXXXXXX,  XXXXXXX,                            KC_F12,  XXXXXXX,  XXXXXXX, KC_WH_D,   XXXXXXX,    KC_RSFT,
         //|---------|  |--------+-----------+-----------+------------+---------+---------|    |---------+---------+---------+---------+---------+---------|  |--------|
                                                        KC_LGUI,    KC_SPC, _______,       _______,   KC_ENT,   KC_RALT
                                                   //`---------+----------+--------|    |---------+---------+---------|'
         ),
     [4] = LAYOUT_split_3x6_3(
         //,-------------------------------------------------------------.                        ,-------------------------------------------------------------.
-             QK_BOOT,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                           XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,    XXXXXXX,
+             QK_BOOT,    RGB_TOG,  RGB_HUI,  RGB_SAI,  RGB_VAI,  XXXXXXX,                           XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,    XXXXXXX,
         //|---------|  |--------+---------+---------+---------+---------|                        |---------+---------+---------+---------+---------|  |--------|
-     KC_SYSTEM_SLEEP,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                           XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,    XXXXXXX,
+             KC_SLEP,    RGB_MOD,  RGB_HUD,  RGB_SAD,  RGB_VAD,  XXXXXXX,                           XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,    XXXXXXX,
         //|---------|  |--------+---------+---------+---------+---------|                        |---------+---------+---------+---------+---------|  |--------|
              KC_LCTL,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                           KC_ACL0,  KC_ACL1,  KC_ACL2,  XXXXXXX,  XXXXXXX,    XXXXXXX,
         //|---------|  |--------+---------+---------+---------+---------+---------|    |---------+---------+---------+---------+--------+----------|  |--------|
@@ -87,20 +87,27 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     switch (layer) {
     case _FIRST:
         SEND_STRING(SS_TAP(X_F17));
+         rgblight_sethsv(HSV_WHITE);
         break;
     case _SECOND:
         SEND_STRING(SS_TAP(X_F18));
+         rgblight_sethsv(HSV_PURPLE);
         break;
     case _THIRD:
         SEND_STRING(SS_TAP(X_F19));
+        rgblight_sethsv(HSV_ORANGE);
         break;
     case _FOURTH:
         SEND_STRING(SS_TAP(X_F20));
+         rgblight_sethsv(HSV_RED);
         break;
     default:
         SEND_STRING(SS_TAP(X_F16));
+         rgblight_sethsv(HSV_GREEN);
         break;
     }
   return state;
 }
+
+
 
