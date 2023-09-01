@@ -18,10 +18,11 @@
 
 #pragma once
 /* Handedness. */
-// #define MASTER_RIGHT
-#define SPLIT_HAND_PIN_LOW_IS_LEFT
-#define SPLIT_HAND_PIN F4
-// #define SPLIT_USB_DETECT
+#define MASTER_RIGHT
+// #define SPLIT_HAND_PIN_LOW_IS_LEFT
+// #define SPLIT_HAND_PIN F4
+#define SPLIT_USB_DETECT
+// #define UNICODE_SELECTED_MODES UNICODE_MODE_MACOS
 // #define EE_HANDS
 #define TAPPING_TOGGLE 3
 #define ONESHOT_TIMEOUT 5000
