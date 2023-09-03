@@ -24,8 +24,24 @@
 #define SPLIT_USB_DETECT
 // #define UNICODE_SELECTED_MODES UNICODE_MODE_MACOS
 // #define EE_HANDS
-#define TAPPING_TOGGLE 3
-#define ONESHOT_TIMEOUT 5000
+#define TAPPING_TOGGLE 2
+#define ONESHOT_TIMEOUT 3000
+// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+
+// Auto Shift
+#define NO_AUTO_SHIFT_ALPHA
+#define AUTO_SHIFT_TIMEOUT TAPPING_TERM
+
+/* mouse config */
+#define MOUSEKEY_INTERVAL       20
+#define MOUSEKEY_DELAY          0
+#define MOUSEKEY_TIME_TO_MAX    60
+#define MOUSEKEY_MAX_SPEED      7
+#define MOUSEKEY_WHEEL_DELAY 0
+#undef AUTO_SHIFT_TIMEOUT
+#define AUTO_SHIFT_TIMEOUT 150
+#define NO_AUTO_SHIFT_SPECIAL
+#define AUTO_SHIFT_TIMEOUT_PER_KEY
 #ifdef RGBLIGHT_ENABLE
 #    undef RGBLED_NUM
 #    undef RGBLED_SPLIT

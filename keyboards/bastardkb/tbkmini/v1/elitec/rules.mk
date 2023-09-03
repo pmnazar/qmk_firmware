@@ -10,9 +10,8 @@ NKRO_ENABLE = no            # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
-# UNICODE_ENABLE = yes
-# UNICODE_COMMON = yes
-# UNICODEMAP_ENABLE = yes
+AUTO_SHIFT_ENABLE = yes # Auto Shift
+COMBO_ENABLE = yes
 
 AUDIO_SUPPORTED = no        # Audio'' is not supported
 RGB_MATRIX_SUPPORTED = no   # RGB matrix is supported and enabled by default
@@ -24,7 +23,7 @@ SPLIT_KEYBOARD = yes
 # shrink
 ENABLE_LTO = yes
 CFLAGS += -flto
-COMBO_ENABLE = no
+# COMBO_ENABLE = no
 ENCODER_ENABLE = no
 SPACE_CADET_ENABLE = no
 GRAVE_ESC_ENABLE = no
